@@ -1,5 +1,5 @@
 <?php
-$dsn="mysql:host=localhost;charset=utf8;dbname=school";
+$dsn="mysql:host=localhost;charset=utf8;dbname=file";
 $pdo=new PDO($dsn,'root','');
 
 date_default_timezone_set("Asia/Taipei");
@@ -168,8 +168,31 @@ function to($location){
     header("location:$location");
 }
 
+function is_image($type){
+    switch($type){
+        case "image/jpeg":
+        case "image/gif":
+        case "image/png":
+            return true;
+        case "":
+        break;
+        default:
+        return false;
+    }
+}
 
-
+function dummy_icon($type){
+    switch($type){
+        case "image/jpeg":
+        case "image/gif":
+        case "image/png":
+            return true;
+        case "":
+        break;
+        default:
+        return false;
+    }
+}
 
 
 ?>
