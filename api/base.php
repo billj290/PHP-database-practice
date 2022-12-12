@@ -183,16 +183,20 @@ function is_image($type){
 function dummy_icon($type){
     switch($type){
         case "text/txt":
-            return "file-txt.png"
+            return "file-txt.png";
             break;
         case "application/mspowerpoint":
-            return ""
+        case "application/vnd.openxmlformats-officedocument.presentationml.pre":    
+            return "file-ppt.png";
+            break;
         case "application/msword":
-            return true;
+            return "file-doc.png";
+            break;
         case "application/postscript":
+            return "file-ai.png";
         break;
         default:
-        return false;
+        return "file-regular.jpg";
     }
 }
 
