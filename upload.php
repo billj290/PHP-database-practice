@@ -32,7 +32,7 @@ include_once "./api/base.php";
             align-items: center;
             border: 1px solid #aaa;
             margin-top: -1px;
-            height: 150px;
+            /* height: 50px; */
         }
         .list-item:nth-child(1){
             text-align: center;
@@ -103,9 +103,10 @@ include_once "./api/base.php";
                     echo "<img src='./upload/{$file['file_name']}' >";
                 }else{
                     $icon=dummy_icon($file['type']);
-                    echo "<img src='./material/{$icon}' style='width:50px'>";
+                    echo "<img src='./material/{$icon}' >";
+                    
                 }
-            
+                
                 echo "</div>";
                 echo "<div>";
                 echo $file['description'];

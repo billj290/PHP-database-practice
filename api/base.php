@@ -183,6 +183,7 @@ function is_image($type){
 function dummy_icon($type){
     switch($type){
         case "text/txt":
+        case "text/plain":
             return "file-txt.png";
             break;
         case "application/mspowerpoint":
