@@ -174,7 +174,6 @@ function is_image($type){
         case "image/gif":
         case "image/png":
             return true;
-        case "":
         break;
         default:
         return false;
@@ -183,11 +182,14 @@ function is_image($type){
 
 function dummy_icon($type){
     switch($type){
-        case "image/jpeg":
-        case "image/gif":
-        case "image/png":
+        case "text/txt":
+            return "file-txt.png"
+            break;
+        case "application/mspowerpoint":
+            return ""
+        case "application/msword":
             return true;
-        case "":
+        case "application/postscript":
         break;
         default:
         return false;
